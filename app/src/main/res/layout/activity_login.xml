@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/alyout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:fitsSystemWindows="true" />
+
+</android.support.design.widget.AppBarLayout>
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ic_logo"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:src="@mipmap/ic_logo"
+        android:layout_below="@id/alyout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_title_text"
+        android:textSize="20sp"
+        android:layout_below="@id/ic_logo"
+        android:layout_marginTop="10dp"
+        android:paddingTop="5dp"
+        android:layout_centerHorizontal="true"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edt_user"
+        android:layout_below="@id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:met_iconLeft="@mipmap/ic_user"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:inputType="text"
+        android:hint="@string/edt_user_text"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edt_password"
+        android:layout_below="@id/edt_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:met_iconLeft="@mipmap/ic_password"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:inputType="textPassword"
+        android:hint="@string/edt_password_text"/>
+
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:id="@+id/progress_wheel"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        wheel:matProg_barColor="#5588FF"
+        android:visibility="invisible"
+        wheel:matProg_progressIndeterminate="true" />
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/layout_sms"
+        android:layout_below="@id/edt_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mrl_rippleAlpha="0.2"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="1dp"
+        app:mrl_rippleColor="#585858"
+        app:mrl_rippleHover="true"
+        android:layout_margin="10dp"
+        app:mrl_rippleOverlay="true"  >
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_select"
+        android:text="@string/btn_login_text"/>
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_item_user"
+            android:icon="@mipmap/icon_mine"
+            android:title="@string/menu_item_user_text" />
+        <item
+            android:id="@+id/menu_item_news"
+            android:icon="@mipmap/ic_center_activity"
+            android:title="@string/ment_item_news_text" />
+        <item
+            android:id="@+id/menu_item_watch"
+            android:icon="@mipmap/ic_center_history"
+            android:title="@string/menu_item_watch_text" />
+    </group>
+
+    <item android:title="@string/menu_group_text">
+        <menu>
+            <item
+                android:id="@+id/menu_item_setting"
+                android:icon="@mipmap/ic_setting_in_setting"
+                android:title="@string/menu_item_setting_text"/>
+            <item
+                android:id="@+id/menu_item_exit"
+                android:icon="@mipmap/mc_fail"
+                android:title="@string/menu_item_exit_text"/>
+        </menu>
+    </item>
+
+</menu>

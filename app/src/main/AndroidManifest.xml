@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.edu.bzu.lims" >
+
+    <permission android:protectionLevel="normal" android:name="cn.bmob.permission.push"/>
+    <uses-permission android:name="cn.bmob.permission.push"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <meta-data android:value="562a272367e58e0ebb001260" android:name="UMENG_APPKEY"/>
+        <meta-data android:value="Channel ID" android:name="UMENG_CHANNEL"/>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.LoginActivity"></activity>
+        <activity android:name=".activity.DetailsActivity"/>
+        <activity android:name=".activity.NewActivity"/>
+        <activity android:name=".activity.UserInformActivity"/>
+        <activity android:name=".activity.DutyActivity"/>
+        <activity android:name=".activity.SettingActivity"/>
+        <activity android:name=".activity.MyNewsActivity"/>
+        <activity android:name=".activity.MyNewsDetailsActivity"/>
+        <activity android:name=".activity.UpdateActivity"/>
+        <activity android:name=".activity.QuestionActivity"/>
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService" >
+        </service>
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <!-- BmobPush start -->
+
+        <service
+            android:label="PushService"
+            android:name="cn.bmob.push.lib.service.PushService"
+            android:process="cn.bmob.push"
+            android:permission="cn.bmob.permission.push"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.bmob.push.lib.service.PushService"/>
+            </intent-filter>
+        </service>
+
+        <receiver android:name="cn.bmob.push.PushReceiver" >
+            <intent-filter android:priority="2147483647" ><!--优先级加最高-->
+                <!-- 系统启动完成后会调用 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <!-- 解锁完成后会调用 -->
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <!-- 监听网络连通性 -->
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="cn.edu.bzu.lims.receiver.MyPushMessageReceiver">
+            <intent-filter >
+                <action android:name="cn.bmob.push.action.MESSAGE"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- BmobPush end -->
+
+    </application>
+
+
+
+</manifest>

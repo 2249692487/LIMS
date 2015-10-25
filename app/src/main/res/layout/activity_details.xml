@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/al"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:fitsSystemWindows="true" />
+    </android.support.design.widget.AppBarLayout>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_userPhoto"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:padding="5dp"
+        android:layout_margin="15dp"
+        android:layout_below="@id/al"
+        android:src="@mipmap/ic_testphoto"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/iv_userPhoto"
+        android:layout_below="@id/al"/>
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iv_userPhoto"
+        android:layout_below="@id/tv_name"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/orange"
+        android:layout_below="@id/iv_userPhoto"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:textColor="@color/orangered"
+        android:textSize="18sp"
+        android:layout_marginLeft="10dp"
+        android:padding="5dp"/>
+
+    <View
+        android:id="@+id/v_divided"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/blue"
+        android:layout_below="@id/tv_content"
+        android:layout_marginTop="10dp"/>
+</RelativeLayout>

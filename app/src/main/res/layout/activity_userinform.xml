@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/inform_bg">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/al"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:fitsSystemWindows="true" />
+    </android.support.design.widget.AppBarLayout>
+<RelativeLayout
+    android:id="@+id/ry_photo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/al">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_userPhoto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/ic_testphoto"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"/>
+</RelativeLayout>
+
+    <LinearLayout
+        android:background="#60ffffff"
+        android:layout_below="@id/ry_photo"
+        android:layout_width="match_parent"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@mipmap/ic_login_user_green"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+       android:drawablePadding="15dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:padding="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_grade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@mipmap/icon_filter_green"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:drawablePadding="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:padding="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_major"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@mipmap/ic_lock_green"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:drawablePadding="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:padding="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:drawablePadding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@mipmap/ic_phone_green"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:padding="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_mail"
+        android:drawablePadding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@mipmap/ic_mail_green"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:padding="5dp"/>
+
+        <TextView
+            android:id="@+id/tv_tips"
+            android:drawablePadding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:drawableLeft="@mipmap/ic_vip_check"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:textColor="@color/blue"
+            android:text="@string/tv_tips_text"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"/>
+    </LinearLayout>
+</RelativeLayout>
